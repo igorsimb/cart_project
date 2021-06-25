@@ -9,3 +9,9 @@ class Topping(models.Model):
 
     def __str__(self):
         return self.name
+
+    # TODO: create var for total_price (aggregate?)
+    @property
+    def get_total_price(self):
+        total_price = self.price
+        return total_price

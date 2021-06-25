@@ -32,13 +32,16 @@
                   <div class="col-1"></div>
                   <a class="col-2 btn btn-sm btn-outline-danger pt-2 invisible">X</a>
               {% endif %}
+        {% endfor %}
 
-          {% endfor %}
+
           <div class="col-10 bg-white p-2 border"><strong>Total</strong></div>
           <div class="col-2 bg-white p-2 border"><strong>
-{#              TODO: Create dynamic total_price that is updated when we add a topping #}
-              {{ price_total}} руб.
+{#              {% for topping in topping_list %}#}
+{#              {{ topping.get_total_price }} руб.#}
+{#              {% endfor %}#}
           </strong></div>
+
       </div>
 
       {# Ingredients #}
