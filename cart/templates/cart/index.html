@@ -38,7 +38,11 @@
           <div class="col-10 bg-white p-2 border"><strong>Total</strong></div>
           <div class="col-2 bg-white p-2 border"><strong>
 {#              {% for topping in topping_list %}#}
-{#              {{ topping.get_total_price }} руб.#}
+                {% if topping_price.total_price is not None %}
+                    {{ topping_price.total_price }} руб.
+                {% else %}
+                    0 руб.
+                {% endif %}
 {#              {% endfor %}#}
           </strong></div>
 
